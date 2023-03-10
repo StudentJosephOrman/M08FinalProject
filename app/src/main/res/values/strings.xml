@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">M08FinalProject</string>
+
+    <string-array name="lang">
+        <item>U.S</item>
+        <item>German</item>
+        <item>Italian</item>
+        <item>French</item>
+    </string-array>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dwLayout"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundColor"
+            tools:context=".Settings"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/txtAILang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="36dp"
+                android:text="AI Reader Language: "
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSetting" />
+
+            <TextView
+                android:id="@+id/txtWPM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:text="1x Spd"
+                android:textColor="@color/textColor2"
+                app:layout_constraintStart_toEndOf="@+id/sbSpeed"
+                app:layout_constraintTop_toBottomOf="@+id/dpAILanguage" />
+
+            <Spinner
+                android:id="@+id/dpAILanguage"
+                android:layout_width="159dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="36dp"
+                android:backgroundTint="@color/spinnerBackgroundColor"
+                android:entries="@array/lang"
+                android:textColor="@color/textColor2"
+                app:layout_constraintStart_toEndOf="@+id/txtAILang"
+                app:layout_constraintTop_toBottomOf="@+id/txtSetting" />
+
+            <TextView
+                android:id="@+id/txtDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="35dp"
+                android:text="Dark Mode Toggle: "
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/toggleButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAIReading" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="64dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="158dp"
+                android:backgroundTint="@color/toggleBackColor"
+                android:text="ToggleButton"
+                android:textColor="@color/textColor2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/txtDarkMode"
+                app:layout_constraintTop_toBottomOf="@+id/sbSpeed" />
+
+            <TextView
+                android:id="@+id/txtSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Settings Page"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnSubmitSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="308dp"
+                android:backgroundTint="@color/buttonBackgroundColor"
+                android:textColor="@color/buttonTextColor"
+                android:text="Submit Settings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSetting" />
+
+            <TextView
+                android:id="@+id/txtAIReading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="35dp"
+                android:text="AI Reading Speed: "
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAILang" />
+
+            <SeekBar
+                android:id="@+id/sbSpeed"
+                android:layout_width="149dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="37dp"
+                android:max="2"
+                android:min="0"
+                android:progress="1"
+                app:layout_constraintEnd_toStartOf="@+id/txtWPM"
+                app:layout_constraintStart_toEndOf="@+id/txtAIReading"
+                app:layout_constraintTop_toBottomOf="@+id/dpAILanguage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/dwView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:itemIconSize="48dp"
+        app:headerLayout="@layout/dwheader"
+        app:menu="@menu/dwitems" />
+</androidx.drawerlayout.widget.DrawerLayout>

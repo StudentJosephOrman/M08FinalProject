@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dwLayout"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+        <TextView
+            android:id="@+id/txtSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="28dp"
+            android:text="How to use Text to Speech page"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPTTSBody" />
+
+        <TextView
+            android:id="@+id/txtAIReading"
+            android:layout_width="309dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:text="The Text to Speech section is designed to be easy to use! You simply have to enter your desired text into the text field and then simply press the speak text button."
+            android:textColor="@color/textColor2"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSetting" />
+
+        <TextView
+            android:id="@+id/txtAILang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="28dp"
+            android:text="How to use Setting Page"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/txtDarkMode"
+            android:layout_width="307dp"
+            android:layout_height="59dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:text="The settings section is primarily used for controlling the AI's language, speed, and turning the application into dark mode."
+            android:textColor="@color/textColor2"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAILang" />
+
+        <TextView
+            android:id="@+id/txtPTTSHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="28dp"
+            android:text="How to use Photo Text to Speech"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDarkMode" />
+
+        <TextView
+            android:id="@+id/txtPTTSBody"
+            android:layout_width="318dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="12dp"
+            android:text="The Photo Text to Speech is similar to the regular Text to Speech section. However, the difference is that you will aim your phone's camera towards the text you want it to hear aloud and when it captures it simply press the speak text button"
+            android:textColor="@color/textColor2"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPTTSHead" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Application Help"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/dwView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:itemIconSize="48dp"
+        app:headerLayout="@layout/dwheader"
+        app:menu="@menu/dwitems" />
+</androidx.drawerlayout.widget.DrawerLayout>

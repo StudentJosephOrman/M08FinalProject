@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="HardcodedText">
+
+
+    <item
+        android:id="@+id/itmServices"
+        android:icon="@drawable/ic_services_foreground"
+        android:textColor="@color/textColor"
+        android:title="Services">
+        <menu>
+            <item
+                android:id="@+id/itmTTS"
+                android:icon="@drawable/ic_tts_foreground"
+                android:textColor="@color/textColor2"
+                android:title="Text To Speech" />
+            <item
+                android:id="@+id/itmPTTS"
+                android:icon="@drawable/ic_ptts_foreground"
+                android:textColor="@color/textColor2"
+                android:title="Photo Text to Speech" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/itmHelp"
+        android:icon="@drawable/ic_info_foreground"
+        android:textColor="@color/textColor"
+        android:title="Help" />
+    <item
+        android:id="@+id/itmSettings"
+        android:icon="@drawable/ic_setting_foreground"
+        android:textColor="@color/textColor"
+        android:title="Settings" />
+</menu>

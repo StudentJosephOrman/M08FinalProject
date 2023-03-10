@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundColor">#282A2D</color>
+    <color name="toggleBackColor">#474747</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="textColor2">#AEACAC</color>
+    <color name="spinnerBackgroundColor">#B3B3B3</color>
+    <color name="buttonBackgroundColor">#673AB7</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+
+    <drawable name="menuLogo">@drawable/ic_app_dark</drawable>
+</resources>
